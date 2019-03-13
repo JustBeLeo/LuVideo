@@ -636,6 +636,15 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable ic_launcher_background
 drawable ic_launcher_foreground
+drawable ic_tab_audio
+drawable ic_tab_audio_press
+drawable ic_tab_netaudio
+drawable ic_tab_netaudio_press
+drawable ic_tab_netvideo
+drawable ic_tab_netvideo_press
+drawable ic_tab_video
+drawable ic_tab_video_press
+drawable iv_main_search_selector
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -648,8 +657,18 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable rb_main_audio_selector
+drawable rb_main_netaudio_selector
+drawable rb_main_netvideo_selector
+drawable rb_main_selector
+drawable rb_main_video_selector
+drawable search
+drawable search_press
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
+drawable tv_bg_shape_normal
+drawable tv_main_bg_selector
+font hyzs
 id ALT
 id CTRL
 id FUNCTION
@@ -711,6 +730,7 @@ id expanded_menu
 id fill
 id fill_horizontal
 id fill_vertical
+id fl_main
 id forever
 id gone
 id group_divider
@@ -745,6 +765,11 @@ id percent
 id progress_circular
 id progress_horizontal
 id radio
+id rb_main_audio
+id rb_main_netaudio
+id rb_main_netvideo
+id rb_main_video
+id rg_main
 id right
 id right_icon
 id right_side
@@ -786,6 +811,7 @@ id text
 id text2
 id textSpacerNoButtons
 id textSpacerNoTitle
+id textView
 id time
 id title
 id titleDividerNoCustom
@@ -843,9 +869,12 @@ layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
+layout titlebar
 mipmap ic_launcher
 mipmap ic_launcher_round
 mipmap logo
+mipmap logo_round
+mipmap titlebar
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1163,6 +1192,7 @@ style ThemeOverlay_AppCompat_Dark_ActionBar
 style ThemeOverlay_AppCompat_Dialog
 style ThemeOverlay_AppCompat_Dialog_Alert
 style ThemeOverlay_AppCompat_Light
+style TranslucentTheme
 style Widget_AppCompat_ActionBar
 style Widget_AppCompat_ActionBar_Solid
 style Widget_AppCompat_ActionBar_TabBar
@@ -1238,6 +1268,7 @@ style Widget_AppCompat_Toolbar_Button_Navigation
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 style Widget_Support_CoordinatorLayout
+style rb_main_style
 styleable AVLoadingIndicatorView indicatorColor indicatorName maxHeight maxWidth minHeight minWidth
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
