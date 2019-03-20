@@ -3,27 +3,47 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_weight="1"
-
     android:background="@mipmap/titlebar">
 
     <TextView
-        android:layout_width="100dp"
-        android:layout_height="wrap_content" />
-
-    <TextView
+        android:layout_marginLeft="60dp"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_weight="1"
+        android:clickable="true"
         android:layout_gravity="center_vertical"
+        android:gravity="center_vertical"
         android:background="@drawable/tv_main_bg_selector"
         android:drawableLeft="@drawable/iv_main_search_selector"
-        android:text="快速搜索" />
+        android:textColor="@drawable/tv_main_title_selector"
+        android:text="快速搜索"
+        android:onClick="text"/>
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
+   <RelativeLayout
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="center_vertical"
+       android:layout_marginLeft="5dp">
+       <ImageView
+           android:id="@+id/iv_main_game"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/ic_topbanner_game"
+           android:layout_marginLeft="5dp"
+           />
+       <ImageView
+           android:id="@+id/iv_main_redball"
+           android:layout_alignRight="@+id/iv_main_game"
+           android:layout_width="6dp"
+           android:layout_height="6dp"
+
+           android:src="@drawable/ic_ball"/>
+       <ImageView
+           android:layout_toRightOf="@+id/iv_main_redball"
+           android:layout_width="30dp"
+           android:layout_height="30dp"
+           android:src="@drawable/ic_topbanner_record"
+           android:layout_marginLeft="5dp"/>
+   </RelativeLayout>
 
 </LinearLayout>

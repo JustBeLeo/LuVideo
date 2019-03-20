@@ -1,18 +1,24 @@
 package com.android.sdk13.mobileplayer;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.transition.Transition;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.android.sdk13.mobileplayer.Base.BasePager;
 import com.android.sdk13.mobileplayer.Pager.AudioPager;
@@ -50,8 +56,20 @@ public class MainActivity extends FragmentActivity {
         super.onCreate( savedInstanceState );
         setContentView( R.layout.activity_main );
         ButterKnife.bind( this );
+        applyPermission();
         initFragment();
         initButton();
+    }
+
+    private void applyPermission() {
+        String[] PERMISSIONS_STORAGE = {
+                android.Manifest.permission.READ_EXTERNAL_STORAGE,
+                android.Manifest.permission.WRITE_EXTERNAL_STORAGE
+        };    //请求状态码
+        int REQUEST_PERMISSION_CODE = 2;
+            if (ActivityCompat.checkSelfPermission( MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE ) != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.requestPermissions( MainActivity.this, PERMISSIONS_STORAGE, REQUEST_PERMISSION_CODE );
+            }
     }
 
     private BasePager getBasePager() {
@@ -73,6 +91,7 @@ public class MainActivity extends FragmentActivity {
             drawables[1].setBounds( r );
             rb.setCompoundDrawables( null, drawables[1], null, null );
         }
+
         rg.setOnCheckedChangeListener( new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -123,5 +142,9 @@ public class MainActivity extends FragmentActivity {
                 transaction.hide( mBasePager.get(i) );
         transaction.show( mBasePager.get(position) );
         transaction.commit();
+    }
+
+    public void text(View v){
+        Toast.makeText( this,"点击了text" ,Toast.LENGTH_SHORT).show();
     }
 }
