@@ -35,7 +35,7 @@ public class VideoPagerAdapter extends RecyclerView.Adapter<VideoPagerAdapter.My
 
     @NonNull
     @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup 0viewGroup, int i) {
+    public MyViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         postion = i;
         View itemView = View.inflate( mContext, R.layout.item_video, null );
 

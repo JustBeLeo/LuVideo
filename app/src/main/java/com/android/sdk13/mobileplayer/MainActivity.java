@@ -4,16 +4,11 @@ import android.Manifest;
 import android.content.pm.PackageManager;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
-import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.transition.Transition;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RadioButton;
@@ -22,7 +17,7 @@ import android.widget.Toast;
 
 import com.android.sdk13.mobileplayer.Base.BasePager;
 import com.android.sdk13.mobileplayer.Pager.AudioPager;
-import com.android.sdk13.mobileplayer.Pager.NetAudioPager;
+import com.android.sdk13.mobileplayer.Pager.MySpacePager;
 import com.android.sdk13.mobileplayer.Pager.NetVideoPager;
 import com.android.sdk13.mobileplayer.Pager.VideoPager;
 
@@ -123,7 +118,7 @@ public class MainActivity extends FragmentActivity {
         mBasePager.add( new VideoPager( this ) );
         mBasePager.add( new NetVideoPager(this) );
         mBasePager.add(new AudioPager(this) );
-        mBasePager.add(new NetAudioPager(this) );
+        mBasePager.add(new MySpacePager(this) );
 
         fm = getSupportFragmentManager();
         transaction = fm.beginTransaction();
