@@ -1,5 +1,7 @@
 package com.android.sdk13.mobileplayer.Domain;
 
+import java.util.Objects;
+
 public class MediaItem {
     private String name;
     private Long duration;
@@ -16,6 +18,24 @@ public class MediaItem {
         this.size = size;
         this.path = path;
         this.artist = artist;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        MediaItem item = (MediaItem) o;
+        return Objects.equals( name, item.name ) &&
+                Objects.equals( duration, item.duration ) &&
+                Objects.equals( size, item.size ) &&
+                Objects.equals( path, item.path ) &&
+                Objects.equals( artist, item.artist );
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash( name, duration, size, path, artist );
     }
 
     public String getName() {

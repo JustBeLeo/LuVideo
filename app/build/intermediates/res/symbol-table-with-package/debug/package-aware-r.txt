@@ -25,6 +25,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array material_colors
 attr actionBarDivider
 attr actionBarItemBackground
 attr actionBarPopupTheme
@@ -284,6 +285,7 @@ attr indicatorName
 attr initialActivityCount
 attr insetForeground
 attr isLightTheme
+attr isLoadMore
 attr itemBackground
 attr itemHorizontalPadding
 attr itemHorizontalTranslationEnabled
@@ -388,6 +390,19 @@ attr measureWithLargestChild
 attr menu
 attr minHeight
 attr minWidth
+attr mlpb_arrow_height
+attr mlpb_arrow_width
+attr mlpb_background_color
+attr mlpb_enable_circle_background
+attr mlpb_inner_radius
+attr mlpb_max
+attr mlpb_progress
+attr mlpb_progress_color
+attr mlpb_progress_stoke_width
+attr mlpb_progress_text_color
+attr mlpb_progress_text_size
+attr mlpb_progress_text_visibility
+attr mlpb_show_arrow
 attr multiChoiceItemLayout
 attr navigationContentDescription
 attr navigationIcon
@@ -395,6 +410,7 @@ attr navigationMode
 attr navigationViewStyle
 attr numericModifiers
 attr overlapAnchor
+attr overlay
 attr paddingBottomNoButtons
 attr paddingEnd
 attr paddingStart
@@ -414,6 +430,19 @@ attr preserveIconSpacing
 attr pressedTranslationZ
 attr progressBarPadding
 attr progressBarStyle
+attr progress_arrow_height
+attr progress_arrow_width
+attr progress_backgroud_color
+attr progress_colors
+attr progress_max_value
+attr progress_show_arrow
+attr progress_show_circle_backgroud
+attr progress_size_type
+attr progress_stoke_width
+attr progress_text_color
+attr progress_text_size
+attr progress_text_visibility
+attr progress_value
 attr queryBackground
 attr queryHint
 attr radioButtonStyle
@@ -555,6 +584,9 @@ attr ttcIndex
 attr useCompatPadding
 attr viewInflaterClass
 attr voiceIcon
+attr wave_color
+attr wave_height_type
+attr wave_show
 attr windowActionBar
 attr windowActionBarOverlay
 attr windowActionModeOverlay
@@ -637,11 +669,13 @@ color foreground_material_dark
 color foreground_material_light
 color highlighted_text_material_dark
 color highlighted_text_material_light
+color material_blue
 color material_blue_grey_800
 color material_blue_grey_900
 color material_blue_grey_950
 color material_deep_teal_200
 color material_deep_teal_500
+color material_green
 color material_grey_100
 color material_grey_300
 color material_grey_50
@@ -649,6 +683,8 @@ color material_grey_600
 color material_grey_800
 color material_grey_850
 color material_grey_900
+color material_red
+color material_yellow
 color mtrl_bottom_nav_colored_item_tint
 color mtrl_bottom_nav_item_tint
 color mtrl_btn_bg_color_disabled
@@ -1122,6 +1158,7 @@ id avi
 id back
 id barrier
 id beginning
+id big
 id blocking
 id bottom
 id bottom_progressbar
@@ -1177,6 +1214,7 @@ id glide_custom_view_target_tag
 id gone
 id group_divider
 id groups
+id higher
 id home
 id homeAsUp
 id icon
@@ -1190,6 +1228,7 @@ id item_touch_helper_previous_elevation
 id iv_item_video_cover
 id iv_main_game
 id iv_main_redball
+id jc_netvideo
 id labeled
 id largeLabel
 id layout_bottom
@@ -1205,6 +1244,8 @@ id media_actions
 id message
 id middle
 id mini
+id mrl_netvideo
+id mrl_video
 id mtrl_child_content_container
 id mtrl_internal_children_alpha_tag
 id multiply
@@ -1235,6 +1276,7 @@ id rg_main
 id right
 id right_icon
 id right_side
+id rv_netvideo
 id rv_video
 id save_image_matrix
 id save_non_transition_alpha
@@ -1310,6 +1352,7 @@ id transition_scene_layoutid_cache
 id transition_transform
 id tv_current
 id tv_duration
+id tv_item_netvideo_describe
 id tv_item_video_duration
 id tv_item_video_introduce
 id tv_item_video_title
@@ -1324,6 +1367,7 @@ id view_offset_helper
 id visible
 id volume_progressbar
 id vp_myspace
+id vv_my_video_player
 id withText
 id wrap
 id wrap_content
@@ -1375,6 +1419,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_my_video_player
 layout activity_splash
 layout activity_video_player
 layout design_bottom_navigation_item
@@ -1392,7 +1437,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_password_icon
 layout fragment_myspace
-layout fragment_video
+layout item_netvideo
 layout item_video
 layout jc_layout_base
 layout jc_layout_standard
@@ -1415,6 +1460,9 @@ layout notification_template_media
 layout notification_template_media_custom
 layout notification_template_part_chronometer
 layout notification_template_part_time
+layout pager_myspace
+layout pager_netvideo
+layout pager_video
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2019,6 +2067,7 @@ styleable ButtonBarLayout allowStacking
 styleable CardView android_minWidth android_minHeight cardBackgroundColor cardCornerRadius cardElevation cardMaxElevation cardPreventCornerOverlap cardUseCompatPadding contentPadding contentPaddingBottom contentPaddingLeft contentPaddingRight contentPaddingTop
 styleable Chip android_textAppearance android_ellipsize android_maxWidth android_text android_checkable checkedIcon checkedIconEnabled checkedIconVisible chipBackgroundColor chipCornerRadius chipEndPadding chipIcon chipIconEnabled chipIconSize chipIconTint chipIconVisible chipMinHeight chipStartPadding chipStrokeColor chipStrokeWidth closeIcon closeIconEnabled closeIconEndPadding closeIconSize closeIconStartPadding closeIconTint closeIconVisible hideMotionSpec iconEndPadding iconStartPadding rippleColor showMotionSpec textEndPadding textStartPadding
 styleable ChipGroup checkedChip chipSpacing chipSpacingHorizontal chipSpacingVertical singleLine singleSelection
+styleable CircleProgressBar mlpb_arrow_height mlpb_arrow_width mlpb_background_color mlpb_enable_circle_background mlpb_inner_radius mlpb_max mlpb_progress mlpb_progress_color mlpb_progress_stoke_width mlpb_progress_text_color mlpb_progress_text_size mlpb_progress_text_visibility mlpb_show_arrow
 styleable CollapsingToolbarLayout collapsedTitleGravity collapsedTitleTextAppearance contentScrim expandedTitleGravity expandedTitleMargin expandedTitleMarginBottom expandedTitleMarginEnd expandedTitleMarginStart expandedTitleMarginTop expandedTitleTextAppearance scrimAnimationDuration scrimVisibleHeightTrigger statusBarScrim title titleEnabled toolbarId
 styleable CollapsingToolbarLayout_Layout layout_collapseMode layout_collapseParallaxMultiplier
 styleable ColorStateListItem android_color android_alpha alpha
@@ -2045,6 +2094,7 @@ styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerti
 styleable MaterialButton android_insetLeft android_insetRight android_insetTop android_insetBottom backgroundTint backgroundTintMode cornerRadius icon iconGravity iconPadding iconSize iconTint iconTintMode rippleColor strokeColor strokeWidth
 styleable MaterialCardView strokeColor strokeWidth
 styleable MaterialComponentsTheme bottomSheetDialogTheme bottomSheetStyle chipGroupStyle chipStandaloneStyle chipStyle colorAccent colorBackgroundFloating colorPrimary colorPrimaryDark colorSecondary editTextStyle floatingActionButtonStyle materialButtonStyle materialCardViewStyle navigationViewStyle scrimBackground snackbarButtonStyle tabStyle textAppearanceBody1 textAppearanceBody2 textAppearanceButton textAppearanceCaption textAppearanceHeadline1 textAppearanceHeadline2 textAppearanceHeadline3 textAppearanceHeadline4 textAppearanceHeadline5 textAppearanceHeadline6 textAppearanceOverline textAppearanceSubtitle1 textAppearanceSubtitle2 textInputStyle
+styleable MaterialRefreshLayout isLoadMore overlay progress_arrow_height progress_arrow_width progress_backgroud_color progress_colors progress_max_value progress_show_arrow progress_show_circle_backgroud progress_size_type progress_stoke_width progress_text_color progress_text_size progress_text_visibility progress_value wave_color wave_height_type wave_show
 styleable MenuGroup android_enabled android_id android_visible android_menuCategory android_orderInCategory android_checkableBehavior
 styleable MenuItem android_icon android_enabled android_id android_checked android_visible android_menuCategory android_orderInCategory android_title android_titleCondensed android_alphabeticShortcut android_numericShortcut android_checkable android_onClick actionLayout actionProviderClass actionViewClass alphabeticModifiers contentDescription iconTint iconTintMode numericModifiers showAsAction tooltipText
 styleable MenuView android_windowAnimationStyle android_itemTextAppearance android_horizontalDivider android_verticalDivider android_headerBackground android_itemBackground android_itemIconDisabledAlpha preserveIconSpacing subMenuArrow

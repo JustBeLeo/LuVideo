@@ -1,6 +1,5 @@
-package com.android.sdk13.mobileplayer.Activity;
+package com.android.sdk13.mobileplayer.Pager.Video.Activity;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
@@ -15,7 +14,6 @@ import org.greenrobot.eventbus.ThreadMode;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import fm.jiecao.jcvideoplayer_lib.JCVideoPlayer;
 import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 public class VideoPlayer extends AppCompatActivity {
@@ -47,7 +45,7 @@ public class VideoPlayer extends AppCompatActivity {
     @Override
     protected void onPause() {
         super.onPause();
-        myJzvdStd.release();
+        JCVideoPlayerStandard.releaseAllVideos();
     }
 
     @Override

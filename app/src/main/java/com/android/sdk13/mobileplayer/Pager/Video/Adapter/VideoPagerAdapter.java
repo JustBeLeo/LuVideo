@@ -1,7 +1,6 @@
-package com.android.sdk13.mobileplayer.Pager.Adapter;
+package com.android.sdk13.mobileplayer.Pager.Video.Adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -10,12 +9,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.sdk13.mobileplayer.Domain.MediaItem;
-import com.android.sdk13.mobileplayer.MainActivity;
-import com.android.sdk13.mobileplayer.Pager.VideoPager;
 import com.android.sdk13.mobileplayer.R;
 import com.bumptech.glide.Glide;
-
-import org.greenrobot.eventbus.EventBus;
 
 import java.util.List;
 

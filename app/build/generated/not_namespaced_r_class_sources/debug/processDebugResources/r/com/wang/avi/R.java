@@ -12,29 +12,29 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int indicatorColor = 0x7f0300fe;
-        public static final int indicatorName = 0x7f0300ff;
-        public static final int maxHeight = 0x7f030164;
-        public static final int maxWidth = 0x7f030166;
-        public static final int minHeight = 0x7f030169;
-        public static final int minWidth = 0x7f03016a;
+        public static final int indicatorColor = 0x7f0400fe;
+        public static final int indicatorName = 0x7f0400ff;
+        public static final int maxHeight = 0x7f040165;
+        public static final int maxWidth = 0x7f040167;
+        public static final int minHeight = 0x7f04016a;
+        public static final int minWidth = 0x7f04016b;
     }
     public static final class string {
         private string() {}
 
-        public static final int app_name = 0x7f0e0027;
+        public static final int app_name = 0x7f0f0027;
     }
     public static final class style {
         private style() {}
 
-        public static final int AVLoadingIndicatorView = 0x7f0f0000;
-        public static final int AVLoadingIndicatorView_Large = 0x7f0f0001;
-        public static final int AVLoadingIndicatorView_Small = 0x7f0f0002;
+        public static final int AVLoadingIndicatorView = 0x7f100000;
+        public static final int AVLoadingIndicatorView_Large = 0x7f100001;
+        public static final int AVLoadingIndicatorView_Small = 0x7f100002;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] AVLoadingIndicatorView = { 0x7f0300fe, 0x7f0300ff, 0x7f030164, 0x7f030166, 0x7f030169, 0x7f03016a };
+        public static final int[] AVLoadingIndicatorView = { 0x7f0400fe, 0x7f0400ff, 0x7f040165, 0x7f040167, 0x7f04016a, 0x7f04016b };
         public static final int AVLoadingIndicatorView_indicatorColor = 0;
         public static final int AVLoadingIndicatorView_indicatorName = 1;
         public static final int AVLoadingIndicatorView_maxHeight = 2;

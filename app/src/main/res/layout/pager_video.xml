@@ -5,10 +5,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+<com.cjj.MaterialRefreshLayout
+    android:id="@+id/mrl_video"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/rv_video"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
+</com.cjj.MaterialRefreshLayout>
+
     <TextView
         android:id="@+id/tv_video_novideo"
         android:layout_width="wrap_content"

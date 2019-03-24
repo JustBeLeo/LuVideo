@@ -1,4 +1,4 @@
-package com.android.sdk13.mobileplayer.Pager;
+package com.android.sdk13.mobileplayer.Pager.Video;
 
 import android.annotation.SuppressLint;
 import android.content.ContentResolver;
@@ -6,40 +6,36 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.net.Uri;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.accessibility.AccessibilityManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.android.sdk13.mobileplayer.Activity.VideoPlayer;
 import com.android.sdk13.mobileplayer.Base.BasePager;
 import com.android.sdk13.mobileplayer.Domain.MediaItem;
-import com.android.sdk13.mobileplayer.Pager.Adapter.VideoPagerAdapter;
+import com.android.sdk13.mobileplayer.Pager.Video.Activity.MyVideoPlayer;
+import com.android.sdk13.mobileplayer.Pager.Video.Adapter.VideoPagerAdapter;
 import com.android.sdk13.mobileplayer.R;
 import com.android.sdk13.mobileplayer.Utils.LogUtil;
+import com.cjj.MaterialRefreshLayout;
+import com.cjj.MaterialRefreshListener;
 import com.wang.avi.AVLoadingIndicatorView;
 
 import org.greenrobot.eventbus.EventBus;
-import org.greenrobot.eventbus.Subscribe;
-import org.greenrobot.eventbus.ThreadMode;
 
-import java.net.URI;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
+import fm.jiecao.jcvideoplayer_lib.JCFullScreenActivity;
+import fm.jiecao.jcvideoplayer_lib.JCVideoPlayerStandard;
 
 @SuppressLint("ValidFragment")
 public class VideoPager extends BasePager {
@@ -50,8 +46,12 @@ public class VideoPager extends BasePager {
     TextView noVideo;
     @BindView(R.id.avi)
     AVLoadingIndicatorView avi;
+    @BindView( R.id.mrl_video )
+    MaterialRefreshLayout mrl_video;
+
     Unbinder unbinder;
 
+    VideoPagerAdapter adapter = null;
     List<MediaItem> mediaItemList;
     EventBus bus;
 
@@ -62,20 +62,28 @@ public class VideoPager extends BasePager {
             super.handleMessage( msg );
             avi.hide();
             if(mediaItemList!=null&&mediaItemList.size()>0){
+                noVideo.setVisibility( View.INVISIBLE );
                 //有数据，设置适配器
-                VideoPagerAdapter adapter = new VideoPagerAdapter( mContext,mediaItemList );
+                adapter = new VideoPagerAdapter( mContext,mediaItemList );
                 adapter.setOnItemClickListener( new VideoPagerAdapter.OnItemClickListener() {
                     @Override
                     public void onClick(int position) {
-                        EventBus.getDefault().postSticky( mediaItemList.get( position ) );
-                        Toast.makeText( mContext,"点击了" + position,Toast.LENGTH_SHORT ).show();
-                        SystemClock.sleep( 100 );
-                        startActivity( new Intent( mContext,VideoPlayer.class ) );
+                        EventBus.getDefault().postSticky(  mediaItemList.get( position ).getPath() );
+                        /*// 直接启动一个全屏页面
+                        JCFullScreenActivity.startActivity(mContext,
+                                mediaItemList.get( position ).getPath(),
+                                JCVideoPlayerStandard.class,
+                                mediaItemList.get( position ).getName());
+                        */
+                        //新建一个显式意图，并将数据传入
+                        Intent intent = new Intent(mContext, MyVideoPlayer.class );
+                        startActivity( intent );
                     }
                 } );
                 rv_video.setAdapter( adapter );
-                rv_video.setLayoutManager( new LinearLayoutManager( mContext,LinearLayoutManager.VERTICAL,false ) );
+                rv_video.setLayoutManager( new LinearLayoutManager( mContext,LinearLayoutManager.VERTICAL,true ) );
                 rv_video.addItemDecoration(new DividerItemDecoration(mContext,DividerItemDecoration.VERTICAL));
+                rv_video.scrollToPosition( mediaItemList.size()-1 );
             }else{
                 //没有数据
                 noVideo.setVisibility( View.VISIBLE );
@@ -83,18 +91,31 @@ public class VideoPager extends BasePager {
         }
     };
 
-    public VideoPager(Context mContext) {
+    public VideoPager(final Context mContext) {
         super( mContext );
-
     }
 
     @Override
     public View initView() {
         LogUtil.e( "本地视频页面被初始化了" );
-        View view = View.inflate( mContext, R.layout.fragment_video, null );
+        View view = View.inflate( mContext, R.layout.pager_video, null );
         unbinder = ButterKnife.bind( this, view );
         initData();
+        setSwipeRefresh();
         return view;
+    }
+
+    private void setSwipeRefresh() {
+        mrl_video.setIsOverLay(false);
+        mrl_video.setWaveShow(false);
+        mrl_video.setMaterialRefreshListener( new MaterialRefreshListener() {
+            @Override
+            public void onRefresh(MaterialRefreshLayout materialRefreshLayout) {
+                getDataFromSdCard();
+                Toast.makeText(mContext,"刷新成功",Toast.LENGTH_SHORT).show();
+                mrl_video.finishRefresh();
+            }
+        } );
     }
 
     @Override
@@ -102,6 +123,7 @@ public class VideoPager extends BasePager {
         LogUtil.e( "本地视频数据被初始化了" );
         getDataFromSdCard();
     }
+
     // 从sd卡获取文件 通过ContentProvider
     private void getDataFromSdCard() {
         new Thread(){
@@ -127,9 +149,8 @@ public class VideoPager extends BasePager {
                         String path = cursor.getString( 3 );
                         String artist = cursor.getString( 4 );
                         MediaItem item = new MediaItem( name,duration,size,path,artist );
-                        mediaItemList.add( item );
+                        mediaItemList.add( item ); }
                     }
-                }
                 cursor.close();
                 handler.sendEmptyMessage(1);
             }

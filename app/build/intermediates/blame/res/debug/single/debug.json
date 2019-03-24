@@ -112,6 +112,10 @@
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable\\abc_btn_borderless_material.xml"
     },
     {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_my_video_player.xml.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\activity_my_video_player.xml"
+    },
+    {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_ic_menu_selectall_mtrl_alpha.png.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable-mdpi-v4\\abc_ic_menu_selectall_mtrl_alpha.png"
     },
@@ -242,10 +246,6 @@
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi-v4_abc_list_longpressed_holo.9.png.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable-mdpi-v4\\abc_list_longpressed_holo.9.png"
-    },
-    {
-        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_video.xml.flat",
-        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\fragment_video.xml"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_action_bar_title_item.xml.flat",
@@ -384,20 +384,20 @@
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\b5041cb4d67e67ac9a68fd9497e5c57f\\res\\layout\\design_layout_tab_text.xml"
     },
     {
-        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
-    },
-    {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_notification_template_part_time.xml.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\support-compat-28.0.0.aar\\36a9818f9f51ee97a53e131bca34e16f\\res\\layout\\notification_template_part_time.xml"
     },
     {
-        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
-        "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\color-v23\\abc_tint_btn_checkable.xml"
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_scrubber_control_to_pressed_mtrl_000.png.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable-hdpi-v4\\abc_scrubber_control_to_pressed_mtrl_000.png"
+    },
+    {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\color-v23_abc_tint_btn_checkable.xml.flat",
+        "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\color-v23\\abc_tint_btn_checkable.xml"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_btn_ripple_color.xml.flat",
@@ -798,6 +798,10 @@
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi-v4_abc_ic_menu_share_mtrl_alpha.png.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
+    },
+    {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_netvideo.xml.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\item_netvideo.xml"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_edit_text_material.xml.flat",
@@ -1220,6 +1224,10 @@
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\layout-watch-v20\\abc_alert_dialog_title_material.xml"
     },
     {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_pager_myspace.xml.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\pager_myspace.xml"
+    },
+    {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\color_mtrl_btn_text_color_selector.xml.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\design-28.0.0.aar\\b5041cb4d67e67ac9a68fd9497e5c57f\\res\\color\\mtrl_btn_text_color_selector.xml"
     },
@@ -1234,6 +1242,10 @@
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_abc_dialog_title_material.xml.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\layout\\abc_dialog_title_material.xml"
+    },
+    {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_pager_netvideo.xml.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\pager_netvideo.xml"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\color_abc_hint_foreground_material_light.xml.flat",
@@ -1350,6 +1362,10 @@
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi-v4_abc_btn_radio_to_on_mtrl_000.png.flat",
         "source": "C:\\Users\\sdk13\\.gradle\\caches\\transforms-1\\files-1.1\\appcompat-v7-28.0.0.aar\\62eed6ccedbfd56d27ae9f478a86f001\\res\\drawable-hdpi-v4\\abc_btn_radio_to_on_mtrl_000.png"
+    },
+    {
+        "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\layout_pager_video.xml.flat",
+        "source": "F:\\Project_test\\MobilePlayer\\app\\src\\main\\res\\layout\\pager_video.xml"
     },
     {
         "merged": "F:\\Project_test\\MobilePlayer\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_abc_ab_share_pack_mtrl_alpha.9.png.flat",

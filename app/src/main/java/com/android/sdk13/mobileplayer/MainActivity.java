@@ -18,8 +18,8 @@ import android.widget.Toast;
 import com.android.sdk13.mobileplayer.Base.BasePager;
 import com.android.sdk13.mobileplayer.Pager.AudioPager;
 import com.android.sdk13.mobileplayer.Pager.MySpacePager;
-import com.android.sdk13.mobileplayer.Pager.NetVideoPager;
-import com.android.sdk13.mobileplayer.Pager.VideoPager;
+import com.android.sdk13.mobileplayer.Pager.NetVideo.NetVideoPager;
+import com.android.sdk13.mobileplayer.Pager.Video.VideoPager;
 
 import java.util.ArrayList;
 import java.util.List;
